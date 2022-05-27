@@ -1,9 +1,6 @@
 name: on_green
 on:
   workflow_call:
-  workflow_run:
-    workflows: [dep1, dep2]
-    types: [completed]
 
 runs:
   using: "composite"
