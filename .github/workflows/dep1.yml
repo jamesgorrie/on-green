@@ -7,7 +7,7 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const sleep = new Promise((reject, resolve) => {
+            const sleep = new Promise((resolve, reject) => {
               setTimeout(() => resolve(), 3000);
             });
             const t = await sleep;
