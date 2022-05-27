@@ -1,0 +1,9 @@
+name: dep1
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: context
