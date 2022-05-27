@@ -6,4 +6,9 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
-          script: console.log(context)
+          script: |
+            const sleep = new Promise((reject, resolve) => {
+              setTimeout(() => resolve(), 5000);
+            });
+            const t = await sleep;
+            console.log(context)
