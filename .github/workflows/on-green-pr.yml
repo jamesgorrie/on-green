@@ -1,6 +1,5 @@
 name: on_green_pr
 on:
-  pull_request:
   workflow_run:
     workflows: [dep1, dep2]
     types: [completed]
