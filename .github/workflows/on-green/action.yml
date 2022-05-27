@@ -12,9 +12,3 @@ runs:
       with:
         script: |
           console.info(context);
-          const check_runs = (await github.rest.checks.listForRef({
-            owner : context.payload.repository.owner.login,
-            repo : context.payload.repository.name,
-            ref: pull_request.head.sha,
-          })).data.check_runs;
-          console.info(check_runs)
