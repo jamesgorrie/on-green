@@ -1,7 +1,12 @@
 name: on_green_pr
-on: pull_request
+on:
+  workflow_run:
+    workflows: [dep1, dep2]
+    types: [completed]
+
 jobs:
   on_green_pr:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - uses: ./.github/workflows/on-green
