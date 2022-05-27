@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/github-script@v6
         with:
-          script: context
+          script: console.log(context)
