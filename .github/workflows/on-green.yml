@@ -11,6 +11,7 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
+            console.info(context);
             const check_runs = (await github.rest.checks.listForRef({
               owner : context.payload.repository.owner.login,
               repo : context.payload.repository.name,
