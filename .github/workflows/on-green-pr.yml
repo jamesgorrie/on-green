@@ -1,0 +1,7 @@
+name: on_green_pr
+on: pull_request
+jobs:
+  on_green_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./.github/workflows/on-green
