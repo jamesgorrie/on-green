@@ -1,11 +1,8 @@
 name: on_green
 on:
   workflow_run:
-    workflows:
-      - dep1
-      - dep2
-    types:
-      - completed
+    workflows: [dep1, dep2]
+    types: [completed]
 
 jobs:
   on_green:
