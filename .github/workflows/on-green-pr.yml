@@ -4,4 +4,4 @@ jobs:
   on_green_pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/on-green
+      - uses: ./.github/workflows/on-green.yml@main
